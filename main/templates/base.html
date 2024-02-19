@@ -62,21 +62,17 @@
           <div class="row">
             <div class="col-md-8 no-padding">
               <div class="visible-lg">
-                <ul id="hornavmenu" class="nav navbar-nav">
+                <ul id="hornavmenu" class="nav navbar-nav"> 
                   <li>
-                    <a href="index.html" class="fa-home active">Главная</a>
-                  </li>
-                  <li>
-                    <span class="fa-th">Каталог</span>
-                    <ul>
-                      <li>
-                        <a href="portfolio-6-column.html">Открыть каталог</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="contact.html" class="fa-comment">Контакты</a>
-                  </li>
+                    <a href="index.html" class="fa-home {% if current_page == 'home' %}active{% endif %}">Главная</a>
+                </li>
+                <li>
+                    <a href="{% url 'catalog:index' %}" class="fa-th {% if current_page == 'catalog' %}active{% endif %}">Каталог</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="fa-comment {% if current_page == 'contact' %}active{% endif %}">Контакты</a>
+                </li>
+                
                 </ul>
               </div>
             </div>
