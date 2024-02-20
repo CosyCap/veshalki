@@ -2,7 +2,6 @@
 {% load static %}
 {% load goods_tags %}
 
-
 {% block content %}
   <div id="content">
     <div class="container background-white">
@@ -16,8 +15,8 @@
               <li>
                 {% tag_categories as categories %}
                 {% for category in categories %}
-                  <a href="{% url 'catalog:index' %}" class="portfolio-selected btn btn-default" data-filter="*">{{ category.name }}</a>
-                {% endfor %}
+                    <a href="{% url 'catalog:index' category.slug %}" class="portfolio-selected btn btn-default" data-filter="#">{{ category.name }}</a>
+                {% endfor %}                
               </li>
             </ul>
           </div>
@@ -30,7 +29,7 @@
             <!-- Portfolio Item -->
             <div class="col-md-6 portfolio-item margin-bottom-40 filer-code">
               <div>
-                <a href="{% url 'catalog:product' product.slug%}">
+                <a href="{% url 'catalog:product' product.slug %}">
                   <figure>
                     <img src="{{ product.image.url }}" alt="{{ product.name }}" />
                     <figcaption>

@@ -64,11 +64,11 @@
               <div class="visible-lg">
                 <ul id="hornavmenu" class="nav navbar-nav"> 
                   <li>
-                    <a href="{% url 'main:index' %}" class="fa-home {% if current_page == 'home' %}active{% endif %}">Главная</a>
+                    <a href="{% url "main:index" %}" class="fa-home {% if current_page == 'home' %}active{% endif %}">Главная</a>
                 </li>
                 <li>
-                    <a href="{% url 'catalog:index' %}" class="fa-th {% if current_page == 'catalog' %}active{% endif %}">Каталог</a>
-                </li>
+                  <a href="{% url 'goods:vse_tovary' %}" class="fa-th {% if current_page == 'catalog' %}active{% endif %}">Каталог</a>
+                </li>              
                 <li>
                     <a href="contact.html" class="fa-comment {% if current_page == 'contact' %}active{% endif %}">Контакты</a>
                 </li>
