@@ -64,7 +64,7 @@
               <div class="visible-lg">
                 <ul id="hornavmenu" class="nav navbar-nav"> 
                   <li>
-                    <a href="index.html" class="fa-home {% if current_page == 'home' %}active{% endif %}">Главная</a>
+                    <a href="{% url 'main:index' %}" class="fa-home {% if current_page == 'home' %}active{% endif %}">Главная</a>
                 </li>
                 <li>
                     <a href="{% url 'catalog:index' %}" class="fa-th {% if current_page == 'catalog' %}active{% endif %}">Каталог</a>
@@ -188,7 +188,6 @@
       <script type="text/javascript" src="{% static 'js/slimbox2.js' %}" charset="utf-8"></script>
       <!-- Modernizr -->
       <script src="{% static 'js/modernizr.custom.js' %}" type="text/javascript"></script>
-      <!-- End JS -->
-    </body>
+  </body>
   </html>
   <!-- === END FOOTER === -->
