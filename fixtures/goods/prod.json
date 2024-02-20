@@ -1,0 +1,14 @@
+[
+    {
+        "model": "goods.product",
+        "pk": 1,
+        "fields": {
+            "name": "Вешалка",
+            "slug": "veshalka",
+            "description": "",
+            "image": "",
+            "price": "1000.00",
+            "category": 3
+        }
+    }
+]

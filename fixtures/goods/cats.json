@@ -1,0 +1,26 @@
+[
+    {
+        "model": "goods.categories",
+        "pk": 2,
+        "fields": {
+            "name": "Все товары",
+            "slug": "vse-tovary"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 3,
+        "fields": {
+            "name": "Первая категория",
+            "slug": "pervaya-kategoriya"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 4,
+        "fields": {
+            "name": "Вторая категория",
+            "slug": "vtoraya-kategoriya"
+        }
+    }
+]

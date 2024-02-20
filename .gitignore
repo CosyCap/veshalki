@@ -6,7 +6,7 @@ __pycache__/
 #ide stuff
 .vscode
 .idea
-
+media/
 #django stuff
 db.sqlite3
-media/
+env

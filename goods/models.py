@@ -28,3 +28,6 @@ class Product(models.Model):
 
     def __str__(self) -> str:
         return self.name
+    
+    def display_id(self):
+        return f"{self.id:05}" #пять нулей перед числом
