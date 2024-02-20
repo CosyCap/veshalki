@@ -5,6 +5,7 @@ app_name = 'goods'
 
 urlpatterns = [
     path('<slug:category_slug>/', views.catalog, name='index'),
+    path('<slug:category_slug>/<int:page>', views.catalog, name='index'),
     path('vse-tovary/', views.catalog, {'category_slug': 'vse-tovary'}, name='vse_tovary'),  # Добавляем новый URL-шаблон
     path('product/<slug:product_slug>/', views.product, name='product'),
 ]
