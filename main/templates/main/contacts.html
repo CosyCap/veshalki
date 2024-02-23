@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- === BEGIN CONTENT === -->
+  <div id="content">
+    <div class="container background-white">
+      <div class="row margin-vert-30">
+        <!-- Main Column -->
+        <div class="col-md-9">
+          <!-- Main Content -->
+          <div class="headline">
+            <h2>Связаться с нами</h2>
+          </div>
+          <p>Мы всегда рады помочь Вам и ответить на Ваши вопросы. Пожалуйста, используйте эту форму, чтобы связаться с нами. Мы постараемся ответить Вам как можно скорее.</p>
+          <br/>
+          <form method="post" th:action>
+            {% csrf_token %}
+            <label>Ваше имя</label>
+            <div class="row margin-bottom-20">
+              <div class="col-md-6 col-md-offset-0">
+                <input class="form-control" type="text" name="name" autocomplete="off" />
+              </div>
+            </div>
+            <label>Email</label>
+            <div class="row margin-bottom-20">
+              <div class="col-md-6 col-md-offset-0">
+                <input class="form-control" type="text" name="email" autocomplete="off" />
+              </div>
+            </div>
+            <label>Номер телефона</label>
+            <div class="row margin-bottom-20">
+              <div class="col-md-6 col-md-offset-0">
+                <input class="form-control" type="text" name="phone_number" autocomplete="off" />
+              </div>
+            </div>
+            <label>Сообщение</label>
+            <div class="row margin-bottom-20">
+              <div class="col-md-8 col-md-offset-0">
+                <textarea rows="8" class="form-control" name="question" autocomplete="off"></textarea>
+              </div>
+            </div>
+            <p>
+              <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+            </p>
+          </form>
+
+          <!-- End Contact Form -->
+          <!-- End Main Content -->
+        </div>
+        <!-- End Main Column -->
+        <!-- Side Column -->
+        <div class="col-md-3">
+          <!-- Recent Posts -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Контактная информация</h3>
+            </div>
+            <div class="panel-body">
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fa-phone color-primary"></i>+7 925 777 3878
+                </li>
+                <li>
+                  <i class="fa-envelope color-primary"></i>6238034@mail.ru
+                </li>
+              </ul>
+              <ul class="list-unstyled">
+                <li>
+                  <strong class="color-primary">ПН-ПТ:</strong> 07:00 - 19:00
+                </li>
+                <li>
+                  <strong class="color-primary">СБ:</strong> Выходной
+                </li>
+                <li>
+                  <strong class="color-primary">ВС:</strong> Выходной
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

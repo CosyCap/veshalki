@@ -1,17 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% if messages %}
+<div class="container">
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
       <div id="slideshow" class="bottom-border-shadow">
         <div class="container no-padding background-white bottom-border">
           <div class="row">
             <!-- Carousel Slideshow -->
             <div id="carousel-example" class="carousel slide" data-ride="carousel">
               <!-- Carousel Indicators -->
-              {% comment %} <ol class="carousel-indicators">
-                <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example" data-slide-to="1"></li>
-                <li data-target="#carousel-example" data-slide-to="2"></li>
-              </ol> {% endcomment %}
               <div class="clearfix"></div>
               <!-- End Carousel Indicators -->
               <!-- Carousel Images -->
@@ -19,23 +23,6 @@
                 <img src="{% static 'img/slideshow/slide1.jpg' %}" />
               </div>
             </div>
-
-            {% comment %} <div class="carousel-inner">
-              <div class="item active">
-                <img src="{% static 'img/slideshow/slide1.jpg' %}" />
-              </div>
-              <div class="item">
-                <img src="{% static 'img/slideshow/slide2.jpg' %}" />
-              </div>
-              <div class="item">
-                <img src="{% static 'img/slideshow/slide3.jpg' %}" />
-              </div>
-            </div> {% endcomment %}
-            <!-- End Carousel Images -->
-            <!-- Carousel Controls -->
-            {% comment %} <a class="left carousel-control" href="#carousel-example" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#carousel-example" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> {% endcomment %}
-            <!-- End Carousel Controls -->
           </div>
           <!-- End Carousel Slideshow -->
         </div>
@@ -95,12 +82,12 @@
           <ul class="portfolio-group">
             <!-- Portfolio Item -->
             <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
-              <a href="#">
+              <a href="{% url "goods:vse_tovary" %}">
                 <figure class="animate fadeInLeft">
                   <img alt="image1" src="{% static 'img/frontpage/image1.jpg' %}" />
                   <figcaption>
-                    <h3>Velit esse molestie</h3>
-                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
+                    <h3>Напольная вешалка рейл для одежды</h3>
+                    <span>Просто и компактно: наша напольная вешалка-рейл для вашей одежды. Идеальное решение для порядка и удобства.</span>
                   </figcaption>
                 </figure>
               </a>
@@ -108,12 +95,12 @@
             <!-- //Portfolio Item// -->
             <!-- Portfolio Item -->
             <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
-              <a href="#">
+              <a href="{% url "goods:vse_tovary" %}">
                 <figure class="animate fadeIn">
                   <img alt="image2" src="{% static 'img/frontpage/image2.jpg' %}" />
                   <figcaption>
-                    <h3>Quam nunc putamus</h3>
-                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
+                    <h3>Двойные вешалки рейл для одежды</h3>
+                    <span>Удвойте пространство для вашей одежды с нашей двойной напольной вешалкой-рейлом! Практичное решение для организации вашей гардеробной.</span>
                   </figcaption>
                 </figure>
               </a>
@@ -121,12 +108,12 @@
             <!-- //Portfolio Item// -->
             <!-- Portfolio Item -->
             <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
-              <a href="#">
+              <a href="{% url "goods:vse_tovary" %}">
                 <figure class="animate fadeInRight">
                   <img alt="image3" src="{% static 'img/frontpage/image3.jpg' %}" />
                   <figcaption>
-                    <h3>Placerat facer possim</h3>
-                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
+                    <h3>Вешалки с панелями</h3>
+                    <span>Организуйте пространство с элегантностью! Наши вешалки с панелями предоставляют идеальное сочетание стиля и функциональности для вашей одежды и аксессуаров.</span>
                   </figcaption>
                 </figure>
               </a>
@@ -134,12 +121,12 @@
             <!-- //Portfolio Item// -->
             <!-- Portfolio Item -->
             <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
-              <a href="#">
+              <a href="{% url "goods:vse_tovary" %}">
                 <figure class="animate fadeInLeft">
                   <img alt="image4" src="{% static 'img/frontpage/image4.jpg' %}" />
                   <figcaption>
-                    <h3>Nam liber tempor</h3>
-                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
+                    <h3>Вешалки рейл с панелями</h3>
+                    <span>Универсальное решение для организации пространства! Наши вешалки-рейлы с панелями обеспечивают стильное хранение одежды и аксессуаров.</span>
                   </figcaption>
                 </figure>
               </a>
@@ -147,12 +134,12 @@
             <!-- //Portfolio Item// -->
             <!-- Portfolio Item -->
             <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
-              <a href="#">
+              <a href="{% url "goods:vse_tovary" %}">
                 <figure class="animate fadeIn">
                   <img alt="image5" src="{% static 'img/frontpage/image5.jpg' %}" />
                   <figcaption>
-                    <h3>Donec non urna</h3>
-                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
+                    <h3>Двойная вешалка с панелями</h3>
+                    <span>Удвойте удобство с нашей двойной вешалкой-рейлом с панелями! Идеальное решение для эффективной организации вашей одежды и аксессуаров.</span>
                   </figcaption>
                 </figure>
               </a>
@@ -160,12 +147,12 @@
             <!-- //Portfolio Item// -->
             <!-- Portfolio Item -->
             <li class="portfolio-item col-sm-4 col-xs-6 margin-bottom-40">
-              <a href="#">
+              <a href="{% url "goods:vse_tovary" %}">
                 <figure class="animate fadeInRight">
                   <img alt="image6" src="{% static 'img/frontpage/image6.jpg' %}" />
                   <figcaption>
-                    <h3>Nullam consectetur</h3>
-                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
+                    <h3>Вешалки с двумя панелями и рейлами</h3>
+                    <span>Организация в два раза эффективнее! Наши вешалки с двумя панелями и рейлами обеспечивают удобное и стильное хранение одежды и аксессуаров.</span>
                   </figcaption>
                 </figure>
               </a>

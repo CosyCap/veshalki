@@ -70,7 +70,7 @@
                   <a href="{% url 'goods:vse_tovary' %}" class="fa-th {% if current_page == 'catalog' %}active{% endif %}">Каталог</a>
                 </li>              
                 <li>
-                    <a href="contact.html" class="fa-comment {% if current_page == 'contact' %}active{% endif %}">Контакты</a>
+                    <a href="{% url "main:contacts" %}" class="fa-comment {% if current_page == 'contact' %}active{% endif %}">Контакты</a>
                 </li>
                 
                 </ul>
@@ -90,49 +90,35 @@
           <div class="row">
             <!-- Disclaimer -->
             <div class="col-md-4">
-              <h3 class="class margin-bottom-10">Disclaimer</h3>
-              <p>All stock images on this template demo are for presentation purposes only, intended to represent a live site and are not included with the template or in any of the Joomla51 club membership plans.</p>
+              <h3 class="class margin-bottom-10">Мобильная вешалка для одежды</h3>
               <p>
-                Most of the images used here are available from
-                <a href="http://www.shutterstock.com/" target="_blank">shutterstock.com</a>. Links are provided if you wish to purchase them from their copyright owners.
-              </p>
+                Используйте нашу мобильную вешалку для одежды – идеальное решение для организации пространства в доме или магазине. Легкая в сборке и удобная в использовании, она надежно поддерживает вашу одежду, сохраняя порядок и целостность.</p>
             </div>
             <!-- End Disclaimer -->
             <!-- Contact Details -->
             <div class="col-md-4 margin-bottom-20">
-              <h3 class="margin-bottom-10">Contact Details</h3>
+              <h3 class="margin-bottom-10">Контактные данные</h3>
               <p>
-                <span class="fa-phone">Telephone:</span>1-800-123-4567
+                <span class="fa-phone">Телефон:</span>+7-925-777-38-78
                 <br />
                 <span class="fa-envelope">Email:</span>
-                <a href="mailto:info@example.com">info@example.com</a>
+                <a href="mailto:info@example.com">6238034@mail.ru</a>
                 <br />
-                <span class="fa-link">Website:</span>
-                <a href="http://www.example.com">www.example.com</a>
-              </p>
-              <p>
-                The Dunes, Top Road,
-                <br />Strandhill,
-                <br />Co. Sligo,
-                <br />Ireland
               </p>
             </div>
             <!-- End Contact Details -->
             <!-- Sample Menu -->
             <div class="col-md-4 margin-bottom-20">
-              <h3 class="margin-bottom-10">Sample Menu</h3>
+              <h3 class="margin-bottom-10">Карта сайта</h3>
               <ul class="menu">
                 <li>
-                  <a class="fa-tasks" href="#">Placerat facer possim</a>
+                  <a class="fa-tasks" href="{% url "main:index" %}">Главная</a>
                 </li>
                 <li>
-                  <a class="fa-users" href="#">Quam nunc putamus</a>
+                  <a class="fa-book" href="goods:vse_tovary">Каталог</a>
                 </li>
                 <li>
-                  <a class="fa-signal" href="#">Velit esse molestie</a>
-                </li>
-                <li>
-                  <a class="fa-coffee" href="#">Nam liber tempor</a>
+                  <a class="fa-phone" href="{% url "main:contacts" %}">Контакты</a>
                 </li>
               </ul>
               <div class="clearfix"></div>
@@ -149,23 +135,20 @@
             <div id="footermenu" class="col-md-8">
               <ul class="list-unstyled list-inline">
                 <li>
-                  <a href="#" target="_blank">Sample Link</a>
+                  <a href="{% url "main:index" %}" target="_blank">Главня</a>
                 </li>
                 <li>
-                  <a href="#" target="_blank">Sample Link</a>
+                  <a href="{% url 'goods:vse_tovary' %}" target="_blank">Каталог</a>
                 </li>
                 <li>
-                  <a href="#" target="_blank">Sample Link</a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">Sample Link</a>
+                  <a href="{% url "main:contacts" %}" target="_blank">Контакты</a>
                 </li>
               </ul>
             </div>
             <!-- End Footer Menu -->
             <!-- Copyright -->
             <div id="copyright" class="col-md-4">
-              <p class="pull-right">(c) 2014 Your Copyright Info</p>
+              <p class="pull-right">(c) 2024 Hang n' Go</p>
             </div>
             <!-- End Copyright -->
           </div>
@@ -188,6 +171,6 @@
       <script type="text/javascript" src="{% static 'js/slimbox2.js' %}" charset="utf-8"></script>
       <!-- Modernizr -->
       <script src="{% static 'js/modernizr.custom.js' %}" type="text/javascript"></script>
-  </body>
+    </body>
   </html>
   <!-- === END FOOTER === -->

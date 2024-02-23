@@ -2,33 +2,43 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid mt-5">
-  <div class="mycontainer">
-    <div class="row mt-1">
-      <div class="col-lg-2">
-        <!-- Пустой блок на усмотрение -->
-      </div>
-      <div class="col-lg-10">
-        <!-- Обертка для контента -->
-        <div class="container-fluid mt-4">
-          <div class="row">
-            <div class="col-md-12">
-              <!-- Контент на странице -->
-              <div class="container-fluid mt-5">
-                <div class="card mb-4 custom-shadow">
-                  <div class="row">
-                    <!-- Изображение товара -->
-                    <div class="col-md-9">
-                      <img src="{{ product.image.url }}" class="img-thumbnail" data-toggle="modal" data-target="#imageModal1" />
-                    </div>
-                    <!-- Описание товара -->
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <p class="card-text">
-                          Цена: <strong>{{ product.price }} Руб.</strong>
-                        </p>
-                        <h5 class="card-title">{{ product.name }}</h5>
-                        <p class="card-text">{{ product.description }}</p>
+  <div class="container-fluid mt-5">
+    <div class="mycontainer">
+      <div class="row mt-1">
+        <div class="col-lg-2">
+          <!-- Пустой блок на усмотрение -->
+        </div>
+        <div class="col-lg-10">
+          <!-- Обертка для контента -->
+          <div class="container-fluid mt-4">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- Контент на странице -->
+                <div class="container-fluid mt-5">
+                  <div class="card mb-4 custom-shadow">
+                    <div class="row">
+                      <!-- Изображение товара -->
+                      <div class="col-md-9">
+                        <img src="{{ product.image.url }}" class="img-thumbnail" data-toggle="modal" data-target="#imageModal1" />
+                      </div>
+                      <!-- Описание товара -->
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <h3 class="card-title">{{ product.name }}</h3>
+                          <p class="card-text">{{ product.description }}</p>
+                          <p class="card-text">
+                            Длина: <strong>{{ product.length }} мм</strong>
+                          </p>
+                          <p class="card-text">
+                            Ширина: <strong>{{ product.width }} мм</strong>
+                          </p>
+                          <p class="card-text">
+                            Высота: <strong>{{ product.height }} мм</strong>
+                          </p>
+                          <p class="card-text">
+                            Цена: <strong>{{ product.price }} Руб.</strong>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -39,24 +49,22 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Модальное окно для изображения товара -->
-  <div class="modal fade" id="imageModal1" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="imageModal1Label">{{ product.name }}</h4>
-        </div>
-        <div class="modal-body">
-          <img src="{{ product.image.url }}" class="img-responsive" />
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+    <!-- Модальное окно для изображения товара -->
+    <div class="modal fade" id="imageModal1" tabindex="-1" role="dialog" aria-labelledby="imageModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="imageModal1Label">{{ product.name }}</h4>
+          </div>
+          <div class="modal-body">
+            <img src="{{ product.image.url }}" class="img-responsive" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 {% endblock %}
