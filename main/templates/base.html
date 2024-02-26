@@ -34,7 +34,7 @@
         <div class="container no-padding">
           <div class="row hidden-xs">
             <div class="col-sm-6 padding-vert-5">
-              <strong>Phone:</strong>&nbsp;+7-925-777-38-78
+              <strong>Номер телефона:</strong>&nbsp;+7-925-777-38-78
             </div>
             <div class="col-sm-6 text-right padding-vert-5">
               <strong>Email:</strong>&nbsp;6238034@mail.ru
@@ -49,7 +49,7 @@
           <div class="row">
             <!-- Logo -->
             <div class="logo">
-              <a href="index.html" title=""><img src="{% static 'img/logo.png' %}" alt="Logo" /></a>
+              <a href="{% url "main:index" %}" title=""><img src="{% static 'img/logo.png' %}" alt="Logo" /></a>
             </div>
             <!-- End Logo -->
           </div>
@@ -115,7 +115,7 @@
                   <a class="fa-tasks" href="{% url "main:index" %}">Главная</a>
                 </li>
                 <li>
-                  <a class="fa-book" href="goods:vse_tovary">Каталог</a>
+                  <a class="fa-book" href="{% url 'goods:vse_tovary' %}">Каталог</a>
                 </li>
                 <li>
                   <a class="fa-phone" href="{% url "main:contacts" %}">Контакты</a>
@@ -135,7 +135,7 @@
             <div id="footermenu" class="col-md-8">
               <ul class="list-unstyled list-inline">
                 <li>
-                  <a href="{% url "main:index" %}" target="_blank">Главня</a>
+                  <a href="{% url "main:index" %}" target="_blank">Главная</a>
                 </li>
                 <li>
                   <a href="{% url 'goods:vse_tovary' %}" target="_blank">Каталог</a>
